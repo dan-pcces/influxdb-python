@@ -110,7 +110,7 @@ class InfluxDBClient(object):
 
         self._scheme = "http"
 
-        if ssl is True:
+        if ssl:
             self._scheme = "https"
 
         self._session.mount(self._scheme + '://', adapter)
